@@ -22,6 +22,16 @@ formBtn.addEventListener("click", function (e) {
   itemList.appendChild(li);
 });
 
+function removeListItem() {
+  this.parentElement.remove();
+}
+
 const dltbtn = document.getElementsByClassName("dltbtn");
 
-dltbtn.addEventListener("click", function () {});
+dltbtn.forEach((element) => {
+  element.addEventListener("click", removeListItem);
+});
+
+// dltbtn.addEventListener("click", function () {
+//   this.dltBtn.remove();
+// });
